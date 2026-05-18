@@ -5,7 +5,7 @@ function useProducts() {
 
   // Fetch products
   useEffect(() => {
-    fetch("https://react-portfolio-backend-6fzu.onrender.com")
+    fetch("/api/projects")
       .then(res => res.json())
       .then(data => setProducts(data));
   }, []);
