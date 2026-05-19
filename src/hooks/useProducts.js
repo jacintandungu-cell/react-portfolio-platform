@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 function useProducts() {
   const [products, setProducts] = useState([]);
-  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3001";
+  const API_URL = process.env.REACT_APP_API_URL || "https://react-portfolio-backend-1.onrender.com";
 
   // Fetch products
   useEffect(() => {
