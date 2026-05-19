@@ -42,6 +42,28 @@ The application reflects real-world challenges junior developers face when build
 
 ## 📂 Project Structure
 
+hooks content loaded
+public
+src
+ components
+  Navbar.js
+  ProductCard.css
+  ProductCard.js
+  SearchBar.js
+ hooks
+  useProducts.js
+ pages
+  App.css
+  App.js
+  index.css
+  index.js
+  logo.svg
+  reportWebVitals.js
+ .gitignore
+README.md
+db.json
+package-lock.json
+package.json
 ---
 
 ## 🚀 Getting Started
