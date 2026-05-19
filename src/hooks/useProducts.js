@@ -1,52 +1,48 @@
 import { useState, useEffect } from "react";
 
+const API_URL = "https://react-portfolio-backend-1.onrender.com/products";
+
 function useProducts() {
   const [products, setProducts] = useState([]);
-  const API_URL = process.env.REACT_APP_API_URL || "https://react-portfolio-backend-1.onrender.com";
 
-  // Fetch products
   useEffect(() => {
-    fetch(`${API_URL}/products`)
-      .then(res => res.json())
-      .then(data => setProducts(data))
-      .catch(err => console.error("Error fetching products:", err));
-  }, [API_URL]);
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch(API_URL);
+        const data = await res.json();
+        setProducts(data);
+      } catch (err) {
+        console.error("Error fetching products:", err);
+      }
+    };
+    fetchProducts();
+  }, []);
 
-  // Add product
-  const addProduct = (product) => {
-    fetch(`${API_URL}/products`, {
+  const addProduct = async (product) => {
+    const res = await fetch(API_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(product)
-    })
-      .then(res => res.json())
-      .then(newProduct => setProducts([...products, newProduct]))
-      .catch(err => console.error("Error adding product:", err));
+      body: JSON.stringify(product),
+    });
+    const newProduct = await res.json();
+    setProducts((prev) => [...prev, newProduct]);
   };
 
-  // Update product
-  const updateProduct = (id, updatedFields) => {
-    fetch(`${API_URL}/products/${id}`, {
+  const updateProduct = async (id, updatedFields) => {
+    const res = await fetch(`${API_URL}/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(updatedFields)
-    })
-      .then(res => res.json())
-      .then(updatedProduct => {
-        setProducts(products.map(p => p.id === id ? updatedProduct : p));
-      })
-      .catch(err => console.error("Error updating product:", err));
+      body: JSON.stringify(updatedFields),
+    });
+    const updatedProduct = await res.json();
+    setProducts((prev) =>
+      prev.map((p) => (p.id === id ? updatedProduct : p))
+    );
   };
 
-  // Delete product
-  const deleteProduct = (id) => {
-    fetch(`${API_URL}/products/${id}`, {
-      method: "DELETE"
-    })
-      .then(() => {
-        setProducts(products.filter(p => p.id !== id));
-      })
-      .catch(err => console.error("Error deleting product:", err));
+  const deleteProduct = async (id) => {
+    await fetch(`${API_URL}/${id}`, { method: "DELETE" });
+    setProducts((prev) => prev.filter((p) => p.id !== id));
   };
 
   return { products, addProduct, updateProduct, deleteProduct };
