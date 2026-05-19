@@ -1,10 +1,8 @@
 // src/components/Navbar.js
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  const [open, setOpen] = useState(false);
-
   return (
     <nav
       style={{
@@ -33,74 +31,16 @@ function Navbar() {
           Home
         </Link>
 
-        {/* Dropdown Menu */}
-        <div
-          style={{ position: "relative" }}
-          onMouseEnter={() => setOpen(true)}
-          onMouseLeave={() => setOpen(false)}
+        <Link
+          to="/add"
+          style={{
+            color: "#fff",
+            textDecoration: "none",
+            fontWeight: "bold",
+          }}
         >
-          <button
-            style={{
-              background: "transparent",
-              border: "none",
-              color: "#fff",
-              fontWeight: "bold",
-              cursor: "pointer",
-            }}
-          >
-            Products ▾
-          </button>
-
-          {open && (
-            <div
-              style={{
-                position: "absolute",
-                top: "2rem",
-                right: 0,
-                background: "#fff",
-                color: "#333",
-                borderRadius: "6px",
-                boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
-                minWidth: "150px",
-                zIndex: 1000,
-              }}
-            >
-              <Link
-                to="/"
-                style={{
-                  display: "block",
-                  padding: "0.5rem 1rem",
-                  textDecoration: "none",
-                  color: "#333",
-                }}
-              >
-                All Products
-              </Link>
-              <Link
-                to="/add"
-                style={{
-                  display: "block",
-                  padding: "0.5rem 1rem",
-                  textDecoration: "none",
-                  color: "#333",
-                }}
-              >
-                Add Product
-              </Link>
-              <Link
-                to="/categories"
-                style={{
-                  display: "block",
-                  padding: "0.5rem 1rem",
-                  textDecoration: "none",
-                  color: "#333",
-                }}
-              >
-                Categories
-              </Link>
-            </div>
-          )}
-        </div>
+          Add Product
+        </Link>
       </div>
     </nav>
   );
