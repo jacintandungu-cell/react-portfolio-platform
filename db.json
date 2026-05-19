@@ -4,7 +4,6 @@
       "id": 1,
       "name": "Laptop",
       "category": "Electronics",
-      "brand": "Dell",
       "price": 1200,
       "description": "High-performance laptop with 16GB RAM, 512GB SSD, and Intel i7 processor.",
       "stock": 15
@@ -13,7 +12,6 @@
       "id": 2,
       "name": "Smartphone",
       "category": "Electronics",
-      "brand": "Samsung",
       "price": 800,
       "description": "Latest Android smartphone with AMOLED display and 128GB storage.",
       "stock": 30
@@ -22,7 +20,6 @@
       "id": 3,
       "name": "Headphones",
       "category": "Accessories",
-      "brand": "Sony",
       "price": 150,
       "description": "Noise-cancelling wireless headphones with 30 hours battery life.",
       "stock": 50
@@ -31,7 +28,6 @@
       "id": 4,
       "name": "Smartwatch",
       "category": "Wearables",
-      "brand": "Apple",
       "price": 250,
       "description": "Fitness-focused smartwatch with heart rate monitor and GPS.",
       "stock": 20
