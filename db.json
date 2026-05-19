@@ -1,15 +1,15 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "laptop",
+      "id": 1,
+      "name": "Laptop",
       "price": 7500,
-      "description": "reliable",
-      "category": "electronic",
+      "description": "Reliable high-performance laptop",
+      "category": "Electronics",
       "stock": 40
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Phone",
       "price": 800,
       "description": "Latest smartphone with advanced camera and fast processor.",
@@ -17,13 +17,12 @@
       "stock": 30
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Headphones",
       "price": 150,
       "description": "Noise-cancelling headphones with premium sound quality.",
       "category": "Accessories",
       "stock": 50
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }
