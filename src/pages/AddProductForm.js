@@ -24,12 +24,25 @@ function AddProductForm() {
   // handle form submit
   const handleSubmit = (e) => {
     e.preventDefault();
-    addProduct({
+    const newProduct = {
       ...formData,
       price: Number(formData.price),
       stock: Number(formData.stock),
+    };
+
+    addProduct(newProduct);
+
+    // ✅ Clear form after adding
+    setFormData({
+      name: "",
+      description: "",
+      category: "",
+      price: "",
+      stock: "",
     });
-    navigate("/"); // go back to landing page after adding
+
+    // ✅ Navigate back to product list so it shows immediately
+    navigate("/");
   };
 
   return (
@@ -89,7 +102,7 @@ function AddProductForm() {
             cursor: "pointer",
           }}
         >
-          Add Product
+          ➕ Add Product
         </button>
       </form>
     </div>
