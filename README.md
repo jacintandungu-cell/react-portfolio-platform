@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# 🛒 Admin Portal - React SPA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📖 Overview
+This project is a **React-based Single Page Application (SPA)** designed as a summative lab exercise. It serves as an **administrator portal for an e-commerce website**, showcasing advanced React concepts such as:
 
-## Available Scripts
+- State management with hooks
+- Event handling
+- Data fetching
+- Client-side routing
+- Responsive design
 
-In the project directory, you can run:
+The application reflects real-world challenges junior developers face when building scalable and interactive frontend systems.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🎯 Features
+- **Landing Page**  
+  Introduces the portal and describes its purpose.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Add Product Form**  
+  Allows administrators to add new products dynamically.
 
-### `npm test`
+- **Product Page**  
+  Displays product details with options to edit values such as price.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Search Functionality**  
+  Provides instant, dynamic product search.
 
-### `npm run build`
+- **Responsive Design**  
+  Matches the provided mock-up and adapts across devices.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Tech Stack
+- **React** (SPA framework)
+- **React Router** (client-side routing)
+- **Hooks** (`useState`, `useEffect`)
+- **CSS Modules / Material UI** (styling & responsiveness)
+- **JSON server / mock API** (simulated backend for products)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📂 Project Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Prerequisites
+- Node.js (v16+ recommended)
+- npm or yarn
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/your-username/admin-portal.git
 
-## Learn More
+# Navigate into the project
+cd admin-portal
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Install dependencies
+npm install
+# Start the mock backend (JSON server)
+npx json-server --watch db.json --port 5000
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Start the React app
+npm start
+📌 Lab Objectives
+Demonstrate proficiency in React fundamentals (components, props, state, events).
 
-### Code Splitting
+Implement CRUD operations with a simulated backend.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Apply responsive design principles to match the mock-up.
 
-### Analyzing the Bundle Size
+Showcase search and dynamic updates for products.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Prepare for real-world frontend development challenges.
